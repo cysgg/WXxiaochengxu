@@ -1,0 +1,25 @@
+<!-- pages/my/my.wxml -->
+<view class="container">
+    <scroll-view>
+        <view class="header">
+            <view class="header_hd">
+                <text>{{city}}</text>
+                <view class="downtips"></view>
+            </view>
+            <view class="header_bd">
+                <view class="haeder_bd-hot header_bd-btn">正在上映</view>
+                <view class="haeder_bd-wating header_bd-btn">即将上映</view>
+            </view>
+            <view class="header_ft">
+                <image src="../../images/shouye1.png" alt=""></image>
+            </view>
+        </view>
+        <swiper indicator-dots="{{indicatorDots}}" vertical="true" circular="true" indicator-active-color="{{active_color}}" autoplay="{{autoplay}}" interval="3000" duration="500">
+            <block wx:for="{{imgUrls}}">
+                <swiper-item>
+                    <image src="{{item}}" class="slide-image"/>
+                </swiper-item>
+            </block>
+        </swiper>
+    </scroll-view>
+</view>

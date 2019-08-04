@@ -1,0 +1,4 @@
+/* pages/wxml/index.wxss */
+.hove{
+  background-color: aqua;
+}

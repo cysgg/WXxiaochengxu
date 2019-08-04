@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/sharearea/sharearea",
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/callback/callback",
+    "pages/openapi/cloudid/cloudid"
+  ],
+  "window": {
+    "navigationStyle" : "custom"
+  },
+  "tabBar": {
+    "selectedColor" : "#BE2537",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath" : "images/tabbar-default/home.png",
+        "selectedIconPath" : "images/tabbar-active/home.png"
+      },
+      {
+        "pagePath": "pages/sharearea/sharearea",
+        "text": "情侣说",
+        "iconPath" : "images/tabbar-default/xiaoxi.png",
+        "selectedIconPath" : "images/tabbar-active/xiaoxi.png"
+      },
+      {
+        "pagePath": "pages/sharearea/sharearea",
+        "text": "蜜语",
+        "iconPath" : "images/tabbar-default/xindong.png",
+        "selectedIconPath" : "images/tabbar-active/xindong.png"
+      },
+      {
+        "pagePath": "pages/sharearea/sharearea",
+        "text": "我的",
+        "iconPath" : "images/tabbar-default/wo.png",
+        "selectedIconPath" : "images/tabbar-active/wo.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

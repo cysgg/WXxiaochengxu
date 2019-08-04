@@ -1,0 +1,87 @@
+<view class="container">
+    <view class="container_bg">
+        <image class="home_pag" src="/images/home_bgi.jpg" mode="scaleToFill" lazy-load="false" binderror="" bindload=""></image>
+    </view>
+    <view class="container_con">
+        <view class="container_title">
+            <view class="loved_time">
+                我们已相爱
+                <span>520</span>
+                天
+            </view>
+        </view>
+        <view class="userview left">
+            <view class="userimg left">
+                <image src="/images/couple2.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+            </view>
+            <view class="username left">情侣男</view>
+            <view class="userweather left">
+                晴
+                <span>33.</span>
+            </view>
+        </view>
+        <view class="userview right">
+            <view class="userimg right">
+                <image src="/images/couple1.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+            </view>
+            <view class="username right">情侣女</view>
+            <view class="userweather right">
+                多云
+                <span>23.</span>
+            </view>
+        </view>
+        <view class="scroll_area">
+            <scroll-view class="scroll-view" scroll-x>
+                <view class="scroll-view-item">
+                    <image class="scroll_item_img" src="/images/home_scroll_view/home.png" mode="aspectFit|aspectFill|widthFix"></image>
+                    <view class="scroll_item_text">我们的家</view>
+                </view>
+                <view class="scroll-view-item">
+                    <image class="scroll_item_img" src="/images/home_scroll_view/xiangce.png" mode="aspectFit|aspectFill|widthFix"></image>
+                    <view class="scroll_item_text">相册</view>
+                </view>
+                <view class="scroll-view-item">
+                    <image class="scroll_item_img" src="/images/home_scroll_view/biji.png" mode="aspectFit|aspectFill|widthFix"></image>
+                    <view class="scroll_item_text">写日记</view>
+                </view>
+                <view class="scroll-view-item">
+                    <image class="scroll_item_img" src="/images/home_scroll_view/jinianri.png" mode="aspectFit|aspectFill|widthFix"></image>
+                    <view class="scroll_item_text">纪念日</view>
+                </view>
+                <view class="scroll-view-item">
+                    <image class="scroll_item_img" src="/images/home_scroll_view/yuejingshi.png" mode="aspectFit|aspectFill|widthFix"></image>
+                    <view class="scroll_item_text">小姨妈</view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="popbox active" hover-class="none" hover-stop-propagation="false">
+        <view class="popbox_bg"></view>
+        <view class="popbox_content">
+            <view class="popbox_header" hover-class="none" hover-stop-propagation="false">
+                <view class="header_bg">
+                    <image src="/images/home_bgi.jpg" mode="aspectFill" lazy-load="false" binderror="" bindload=""></image>
+                </view>
+                <view class="header_con">
+                    <view class="header_title">
+                        我们已相爱<span>520</span>天
+                    </view>
+                    <view class="header_btns">
+                        <view class="popbox_btn" hover-class="none" hover-stop-propagation="false">
+                            ♡合影设置♡
+                        </view>
+                        <view class="popbox_btn" hover-class="none" hover-stop-propagation="false">
+                            ♡秀恩爱♡
+                        </view>
+                        <view class="popbox_btn" hover-class="none" hover-stop-propagation="false">
+                            ♡日期设置♡
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="popbox_body">
+                lt
+            </view>
+        </view>
+    </view>
+</view>
