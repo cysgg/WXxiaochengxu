@@ -5,9 +5,51 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    items: [{
+      name: "聊天记录",
+      num: 1336,
+      type: "条"
+    }, {
+      name: "发送距离",
+      num: 8,
+      type: "次"
+    }, {
+      name: "写日记",
+      num: 8,
+      type: "篇"
+    }, {
+      name: "纪念日",
+      num: 5,
+      type: "个"
+    }, {
+      name: "上传照片",
+      num: 102,
+      type: "张"
+    }],
+    popboxactive: false,
+    fadeClass: "fadeIn"
   },
-
+  hidPopBox() {
+    this.setData({
+      fadeClass: "fadeOut"
+    })
+    setTimeout(()=>{
+      this.setData({
+        popboxactive: false
+      })
+    },600)
+  },
+  showPopBox() {
+    this.setData({
+      fadeClass: "fadeIn"
+    })
+    setTimeout(()=>{
+      this.setData({
+        popboxactive: true
+      })
+    },200)
+    
+  },
   /**
    * 生命周期函数--监听页面加载
    */
