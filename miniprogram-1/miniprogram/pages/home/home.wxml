@@ -11,10 +11,10 @@
             </view>
         </view>
         <view class="userview left">
-            <view class="userimg left">
+            <view class="userimg left" data-personid="2" catchtap="toPersonHtml" hover-stop-propagation="true">
                 <image src="/images/couple2.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
             </view>
-            <view class="username left">情侣男</view>
+            <view class="username left">我对象</view>
             <view class="userweather left">
                 晴
                 <span>33.</span>
@@ -24,7 +24,7 @@
             <view class="userimg right">
                 <image src="/images/couple1.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
             </view>
-            <view class="username right">情侣女</view>
+            <view class="username right">我</view>
             <view class="userweather right">
                 多云
                 <span>23.</span>

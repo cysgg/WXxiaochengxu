@@ -10,6 +10,19 @@ Page({
     active_color : 'red',
     autoplay: true,
     interval: 5000,
-    duration: 1000
+    duration: 1000,
+    items : []
+  },
+  onLoad:function(option){
+    let _self = this
+    wx.request({
+      url: 'https://www.easy-mock.com/mock/5d2ed7ca7f168b5e40d35f47/movie/new/movielist',
+      success:function(res){
+        _self.setData({
+          items: res.data.data.movieList
+        })
+        console.log(res.data.data.movieList)
+      }
+    })
   }
 })

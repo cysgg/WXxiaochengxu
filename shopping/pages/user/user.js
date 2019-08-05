@@ -1,32 +1,18 @@
-// pages/sharearea/sharearea.js
-import { $init, $digest } from '../../utils/common.util'
-
+// pages/user/user.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    images: []
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    $init(this)
-  },
-  chooseImage(e) {
-    wx.chooseImage({
-      sizeType: ['original', 'compressed'],  //可选择原图或压缩后的图片
-      sourceType: ['album', 'camera'], //可选择性开放访问相册、相机
-      success: res => {
-        const images = this.data.images.concat(res.tempFilePaths)
-        // 限制最多只能留下3张照片
-        this.data.images = images.length <= 3 ? images : images.slice(0, 3) 
-        $digest(this)
-      }
-    })
+
   },
 
   /**

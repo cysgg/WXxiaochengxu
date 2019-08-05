@@ -29,26 +29,37 @@ Page({
     popboxactive: false,
     fadeClass: "fadeIn"
   },
+  toPersonHtml(e) {
+    let personid = e.currentTarget.dataset.personid
+    wx.navigateTo({
+      url: '/pages/personHtml/personHtml?personid='+personid,
+      
+      success: function (res) {
+        // 通过eventChannel向被打开页面传送数据
+        
+      }
+    })
+  },
   hidPopBox() {
     this.setData({
       fadeClass: "fadeOut"
     })
-    setTimeout(()=>{
+    setTimeout(() => {
       this.setData({
         popboxactive: false
       })
-    },600)
+    }, 600)
   },
   showPopBox() {
     this.setData({
       fadeClass: "fadeIn"
     })
-    setTimeout(()=>{
+    setTimeout(() => {
       this.setData({
         popboxactive: true
       })
-    },200)
-    
+    }, 200)
+
   },
   /**
    * 生命周期函数--监听页面加载

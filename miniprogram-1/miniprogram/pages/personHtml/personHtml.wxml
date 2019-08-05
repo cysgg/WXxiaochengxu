@@ -1,0 +1,37 @@
+<view class="container">
+    <view class="container_top flex_column">
+        <view class="flex_item flex_row item_space img_item">
+            <view>头像</view>
+            <view>
+                <image class="item_img" src="/images/couple2.jpg" mode="aspectFill" lazy-load="false" binderror="" bindload=""></image>
+                <span class="for_right item_img_mt"></span>
+            </view>
+        </view>
+        <view class="flex_item flex_row item_space">
+            <view>昵称</view>
+            <view>
+                当午
+            </view>
+        </view>
+        <view class="flex_item flex_row item_space">
+            <view>恩爱号</view>
+            <view>
+                16942318976
+            </view>
+        </view>
+        <view class="flex_item flex_row item_space">
+            <view>手机号</view>
+            <view>
+                14189745631
+            </view>
+        </view>
+    </view>
+    <view class="container_bot flex_column">
+        <view class="flex_item flex_row item_space">
+            <view>账号关系</view>
+            <view>
+                <span class="for_right"></span>
+            </view>
+        </view>
+    </view>
+</view>

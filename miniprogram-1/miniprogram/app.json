@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/personHtml/personHtml",
     "pages/sharearea/sharearea",
     "pages/index/index",
     "pages/userConsole/userConsole",
