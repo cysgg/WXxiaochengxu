@@ -27,40 +27,100 @@ Page({
       type: "张"
     }],
     popboxactive: false,
-    fadeClass: "fadeIn"
+    showpopboxbg : false,
+    showpopinner : false,
+    showpopcontainer: false,
+    showpopupbox: false,
+    hasshowpopupbox: false,
+    homebgimg:'/images/home_bgi.jpg'
+  },
+  showchooseimgbox() {
+    this.setData({
+      showpopcontainer: false,
+      showpopupbox: true,
+      hasshowpopupbox: true
+    })
+    setTimeout(()=>{
+      this.setData({
+        showpopinner : false
+      })
+    },200)
   },
   toPersonHtml(e) {
     let personid = e.currentTarget.dataset.personid
     wx.navigateTo({
-      url: '/pages/personHtml/personHtml?personid='+personid,
-      
+      url: '/pages/personHtml/personHtml?personid=' + personid,
+
       success: function (res) {
         // 通过eventChannel向被打开页面传送数据
-        
       }
     })
   },
   hidPopBox() {
     this.setData({
-      fadeClass: "fadeOut"
+      showpopcontainer: false,
+      showpopupbox: false,
+      showpopboxbg : false
     })
     setTimeout(() => {
       this.setData({
-        popboxactive: false
+        showpopinner : false,
+        popboxactive: false,
+        hasshowpopupbox: false
       })
     }, 600)
   },
   showPopBox() {
     this.setData({
-      fadeClass: "fadeIn"
+      showpopinner : true,
+      showpopcontainer: true,
+      showpopboxbg : true,
+      popboxactive: true
     })
-    setTimeout(() => {
-      this.setData({
-        popboxactive: true
-      })
-    }, 200)
-
   },
+  getcamerapotot(){
+    let _this = this
+    this.takephoto('camera').then(res=>{
+      _this.setData({
+        homebgimg : res.tempFilePaths[0]
+      })
+      _this.hidPopBox()
+    })
+  },
+  getalbumpotot(){
+    let _this = this
+    this.takephoto('album').then(res=>{
+      _this.setData({
+        homebgimg : res.tempFilePaths[0]
+      })
+      _this.hidPopBox()
+    })
+  },
+  setdefaultbgimg(){
+    this.setData({
+      homebgimg : '/images/home_bgi.jpg'
+    })
+    this.hidPopBox()
+  },
+  takephoto(sourceType) {
+    return new Promise((resolve,reject)=>{
+      wx.chooseImage({
+        count: 1, // 默认9
+        sizeType: ['original'], // 可以指定是原图还是压缩图，默认二者都有
+        sourceType: [sourceType], // 可以指定来源是相册还是相机，默认二者都有
+        success: function (res) {
+          return resolve(res)
+          // var tempFilePath = res.tempFilePaths[0];
+        },
+        fail : function(err){
+          return reject(err)
+        }
+      })
+    })
+    
+  },
+
+
   /**
    * 生命周期函数--监听页面加载
    */

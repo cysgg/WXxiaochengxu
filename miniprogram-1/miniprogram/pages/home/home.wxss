@@ -156,8 +156,18 @@
     background-color: #fff;
     overflow: hidden;
 }
+.hid{
+    display: none;
+}
+.show{
+    display: block;
+}
+
 .fadeIn{
     animation: fadeIn .2s ease-in-out 1;
+}
+.upIn{
+    animation: upIn .2s ease-in-out 1;
 }
 .fadeOut{
     animation: fadeOut .2s ease-in-out 1 forwards;
@@ -262,6 +272,15 @@
     }
 }
 
+@keyframes upIn{
+    0%{
+        transform:  translate(0,101%);
+    }
+    100%{
+        transform:  translate(0,0%);
+    }
+}
+
 @keyframes fadeOut{
     0%{
         transform:  translate(0,0%);
@@ -278,4 +297,49 @@
     100%{
         background-color: rgba(0,0,0,0);
     }
+}
+
+
+.upimgbox{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    box-sizing: border-box;
+    background-color: #ddd;
+    z-index: 3;
+}
+.upimgbox_top{
+    font-size: 32rpx;
+    color: #000;
+    background-color: #fff;
+}
+.upimgbox_title{
+    height: 70rpx;
+    text-align: center;
+    line-height: 70rpx;
+    font-size: 22rpx;
+    color: #999999;
+}
+.upimgbox_items{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.upimgbox_item{
+    border-top: 1px solid #efefef;
+    width: 100%;
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    font-size: 32rpx;
+}
+.upimgbox_btn{
+    height: 90rpx;
+    text-align: center;
+    line-height: 90rpx;
+    font-size: 32rpx;
+    color: #000;
+    margin-top: 10rpx;
+    background-color: #fff;
 }

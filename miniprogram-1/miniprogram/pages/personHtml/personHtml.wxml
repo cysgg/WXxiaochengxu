@@ -1,9 +1,9 @@
 <view class="container">
     <view class="container_top flex_column">
-        <view class="flex_item flex_row item_space img_item">
+        <view class="flex_item flex_row item_space img_item" catchtap="toImgShow" >
             <view>头像</view>
             <view>
-                <image class="item_img" src="/images/couple2.jpg" mode="aspectFill" lazy-load="false" binderror="" bindload=""></image>
+                <image class="item_img" src="{{imgurl}}" mode="aspectFill" lazy-load="false" binderror="" bindload=""></image>
                 <span class="for_right item_img_mt"></span>
             </view>
         </view>

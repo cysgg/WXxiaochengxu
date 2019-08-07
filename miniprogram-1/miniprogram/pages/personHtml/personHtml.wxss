@@ -25,6 +25,10 @@
     align-items: center;
 }
 
+.flex_item:active {
+    background-color: inherit;
+}
+
 .flex_item{
     box-sizing: border-box;
     padding: 36rpx;

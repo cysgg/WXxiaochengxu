@@ -8,7 +8,8 @@ Page({
     personId : 1,
     personInfo: {
       id: 1
-    }
+    },
+    imgurl : '/images/couple2.jpg'
   },
 
   setnavtitle: function(str){
@@ -26,6 +27,16 @@ Page({
     this.data.personId == 1 ? this.setnavtitle("另一半") : this.setnavtitle("个人账户")
     this.setData({
       personId: personid
+    })
+  },
+
+  toImgShow(){
+    let _this = this
+    wx.navigateTo({
+      url: '/pages/imgShow/imgShow?imgurl=' + _this.data.imgurl,
+      success: function (res) {
+        // 通过eventChannel向被打开页面传送数据
+      }
     })
   },
 

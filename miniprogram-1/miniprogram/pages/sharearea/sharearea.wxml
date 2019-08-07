@@ -1,2 +1,9 @@
+
+
 <!--pages/sharearea/sharearea.wxml-->
-<button type="default" size="mini" bindtap="chooseImage">添加图片</button>
+<view class="my-item" id="player" style='height:60px;line-height:60px;margin-top:10px'> 
+  <text>头像</text>
+  <view class="language">
+  <image  class="userinfo-avatar" src="{{user.avatar}}" background-size="cover"></image> 
+</view>
+</view>

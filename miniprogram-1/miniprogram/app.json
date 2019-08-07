@@ -1,8 +1,10 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/personHtml/personHtml",
+    "pages/dearwords/dearwords",
+    "pages/imgShow/imgShow",
     "pages/sharearea/sharearea",
+    "pages/personHtml/personHtml",
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -16,7 +18,8 @@
     "pages/openapi/cloudid/cloudid"
   ],
   "window": {
-    "navigationStyle" : "custom"
+    "navigationStyle" : "custom",
+    "enablePullDownRefresh" : false
   },
   "tabBar": {
     "selectedColor" : "#BE2537",
@@ -34,7 +37,7 @@
         "selectedIconPath" : "images/tabbar-active/xiaoxi.png"
       },
       {
-        "pagePath": "pages/sharearea/sharearea",
+        "pagePath": "pages/dearwords/dearwords",
         "text": "蜜语",
         "iconPath" : "images/tabbar-default/xindong.png",
         "selectedIconPath" : "images/tabbar-active/xindong.png"
