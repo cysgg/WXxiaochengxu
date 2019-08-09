@@ -1,0 +1,25 @@
+<!-- pages/editAnn/editAnn.wxml -->
+<view class="main">
+    <view class="top">
+        <view class="list-items">
+            <view class="list-item">
+                <image src="/images/editAnn/bianji.png" class="icon"></image>
+                <text>我们哪一天在一起的？</text>
+            </view>
+            <view class="list-item time-icon">
+                <image src="/images/editAnn/iconfontshijian.png" class="icon"></image>
+                <picker mode="date" value="{{startTime}}" start="2000-01-01" end="{{nowTime}}" bindchange="bindDateChange">
+                    <view class="picker">{{startTime}}</view>
+                </picker>
+            </view>
+        </view>
+    </view>
+    <view class="bot">
+        <view class="list-items pic-icon">
+            <view class="list-item">
+                <image src="/images/editAnn/tupian.png" class="icon"></image>
+                <text>背景</text>
+            </view>
+        </view>
+    </view>
+</view>

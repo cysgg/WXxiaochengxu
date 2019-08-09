@@ -1,0 +1,9 @@
+{
+  "usingComponents": {},
+  "navigationStyle" : "default",
+  "navigationBarBackgroundColor": "#EE3B5C",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "编辑纪念日",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+}

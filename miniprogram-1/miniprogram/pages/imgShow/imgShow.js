@@ -38,7 +38,7 @@ Page({
         scaleW: W,
         scaleH: W * roate,
         viewWidth: W,
-        viewHeight: W * roate
+        viewHeight: H
       })
     })
   },

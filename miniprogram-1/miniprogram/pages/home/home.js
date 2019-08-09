@@ -27,12 +27,14 @@ Page({
       type: "张"
     }],
     popboxactive: false,
-    showpopboxbg : false,
-    showpopinner : false,
+    showpopboxbg: false,
+    showpopinner: false,
     showpopcontainer: false,
     showpopupbox: false,
     hasshowpopupbox: false,
-    homebgimg:'/images/home_bgi.jpg'
+    homebgimg: '/images/home_bgi.jpg',
+    startTime: "2017-11-12",
+    togetherDays: 0
   },
   showchooseimgbox() {
     this.setData({
@@ -40,19 +42,39 @@ Page({
       showpopupbox: true,
       hasshowpopupbox: true
     })
-    setTimeout(()=>{
+    setTimeout(() => {
       this.setData({
-        showpopinner : false
+        showpopinner: false
       })
-    },200)
+    }, 200)
   },
   toPersonHtml(e) {
     let personid = e.currentTarget.dataset.personid
     wx.navigateTo({
       url: '/pages/personHtml/personHtml?personid=' + personid,
-
       success: function (res) {
         // 通过eventChannel向被打开页面传送数据
+      }
+    })
+  },
+  toEditAnnHtml(v) {
+    this.hidPopBox()
+    wx.navigateTo({
+      url: '/pages/editAnn/editAnn?time=' + this.data.startTime,
+      success: function (res) {
+        // 通过eventChannel向被打开页面传送数据
+        console.log('111');
+
+      }
+    })
+  },
+  toReductionHtml(v) {
+    wx.navigateTo({
+      url: '/pages/reduction/reduction?imgurl=' + v,
+      success: function (res) {
+        // 通过eventChannel向被打开页面传送数据
+        console.log('111');
+
       }
     })
   },
@@ -60,11 +82,11 @@ Page({
     this.setData({
       showpopcontainer: false,
       showpopupbox: false,
-      showpopboxbg : false
+      showpopboxbg: false
     })
     setTimeout(() => {
       this.setData({
-        showpopinner : false,
+        showpopinner: false,
         popboxactive: false,
         hasshowpopupbox: false
       })
@@ -72,38 +94,36 @@ Page({
   },
   showPopBox() {
     this.setData({
-      showpopinner : true,
+      showpopinner: true,
       showpopcontainer: true,
-      showpopboxbg : true,
+      showpopboxbg: true,
       popboxactive: true
     })
   },
-  getcamerapotot(){
+  getcamerapotot() {
     let _this = this
-    this.takephoto('camera').then(res=>{
-      _this.setData({
-        homebgimg : res.tempFilePaths[0]
-      })
+    this.takephoto('camera').then(res => {
       _this.hidPopBox()
+      _this.toReductionHtml(res.tempFilePaths[0])
+    }).catch(err=>{
+      console.log(err);
     })
   },
-  getalbumpotot(){
+  getalbumpotot() {
     let _this = this
-    this.takephoto('album').then(res=>{
-      _this.setData({
-        homebgimg : res.tempFilePaths[0]
-      })
+    this.takephoto('album').then(res => {
       _this.hidPopBox()
+      _this.toReductionHtml(res.tempFilePaths[0])
     })
   },
-  setdefaultbgimg(){
+  setdefaultbgimg() {
     this.setData({
-      homebgimg : '/images/home_bgi.jpg'
+      homebgimg: '/images/home_bgi.jpg'
     })
     this.hidPopBox()
   },
   takephoto(sourceType) {
-    return new Promise((resolve,reject)=>{
+    return new Promise((resolve, reject) => {
       wx.chooseImage({
         count: 1, // 默认9
         sizeType: ['original'], // 可以指定是原图还是压缩图，默认二者都有
@@ -112,12 +132,12 @@ Page({
           return resolve(res)
           // var tempFilePath = res.tempFilePaths[0];
         },
-        fail : function(err){
+        fail: function (err) {
           return reject(err)
         }
       })
     })
-    
+
   },
 
 
@@ -139,7 +159,18 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    let days = this.checkDate(this.data.startTime,new Date())
+      this.setData({
+        togetherDays: days
+      })
 
+  },
+  checkDate: function (startTime, endTime) {
+    //转成毫秒数，两个日期相减
+    var days = Date.parse(endTime) - Date.parse(startTime);
+    //转换成天数
+    var day = parseInt(days / (1000 * 60 * 60 * 24));
+    return day
   },
 
   /**
@@ -173,7 +204,15 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    this.hidPopBox()
+    return {
+      title: '小恩爱',
+      path: '/page/home/home'
+    }
   }
 })

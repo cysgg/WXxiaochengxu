@@ -1,6 +1,5 @@
 <!-- pages/imgShow/imgShow.wxml -->
 <view class="container" bindtap="backtoold">
-    <view class="imgbg"></view>
     <view class="imgbox" bindtouchmove="touchevent" bindtouchend="touchendevent" style="width:{{viewWidth}}px;height:{{viewHeight}}}}px;">
         <image class="img" style="width:{{scaleW}}px;height:{{scaleH}}px;" src="{{imageurl}}" mode="widthFix"></image>
     </view>

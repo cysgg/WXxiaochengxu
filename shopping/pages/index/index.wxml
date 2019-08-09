@@ -6,4 +6,75 @@
             </swiper-item>
         </block>
     </swiper>
+    <view class="selected">
+        <view class="select-title">
+            <text>精选主题</text>
+        </view>
+        <view class="select-top">
+            <view class="select-top-small">
+                <navigator url="../list/list">
+                    <image src="/images/image/s1.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+                </navigator>
+            </view>
+            <view class="select-top-small">
+                <navigator target="" url="../list/list" hover-class="navigator-hover" open-type="navigate">
+                    <image src="/images/image/s2.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+                </navigator>
+            </view>
+        </view>
+        <view class="select-bottom">
+            <navigator url="../list/list" >
+                <image src="/images/image/s3.png" />
+            </navigator>
+        </view>
+        <view class="newest">
+            <view class="newest-title">
+                <text>最近新品</text>
+            </view>
+            <view class="newest-box">
+                <view class="newest-list">
+                    <navigator class="" target="" url="../details/details" hover-class="navigator-hover" open-type="navigate">
+                        <image class="" src="/images/image/s4.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+                        <view class="newest-text">
+                            <text class="" selectable="false" space="false" decode="false">瓜子 100g</text>
+                        </view>
+                        <view class="newest-text">
+                            <text class="" selectable="false" space="false" decode="false">￥ 0.01</text>
+                        </view>
+                    </navigator>
+                </view><view class="newest-list">
+                    <navigator class="" target="" url="../details/details" hover-class="navigator-hover" open-type="navigate">
+                        <image class="" src="/images/image/s4.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+                        <view class="newest-text">
+                            <text class="" selectable="false" space="false" decode="false">瓜子 100g</text>
+                        </view>
+                        <view class="newest-text">
+                            <text class="" selectable="false" space="false" decode="false">￥ 0.01</text>
+                        </view>
+                    </navigator>
+                </view><view class="newest-list">
+                    <navigator class="" target="" url="../details/details" hover-class="navigator-hover" open-type="navigate">
+                        <image class="" src="/images/image/s4.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+                        <view class="newest-text">
+                            <text class="" selectable="false" space="false" decode="false">瓜子 100g</text>
+                        </view>
+                        <view class="newest-text">
+                            <text class="" selectable="false" space="false" decode="false">￥ 0.01</text>
+                        </view>
+                    </navigator>
+                </view>
+                <view class="newest-list">
+                    <navigator class="" target="" url="../details/details" hover-class="navigator-hover" open-type="navigate">
+                        <image class="" src="/images/image/s4.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+                        <view class="newest-text">
+                            <text class="" selectable="false" space="false" decode="false">瓜子 100g</text>
+                        </view>
+                        <view class="newest-text">
+                            <text class="" selectable="false" space="false" decode="false">￥ 0.01</text>
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+    </view>
 </view>

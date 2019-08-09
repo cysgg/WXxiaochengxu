@@ -1,44 +1,30 @@
-// pages/personHtml/personHtml.js
+// pages/editAnn/editAnn.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    personId: 1,
-    personInfo: {
-      id: 1
-    },
-    imgurl: [,
-      '/images/couple1.jpg',
-      '/images/couple2.jpg'
-    ]
+    startTime : '2017-08-09',
+    nowTime : new Date().toString()
   },
-
-  setnavtitle: function (str) {
-    wx.setNavigationBarTitle({
-      title: str
+  bindDateChange: function(e) {
+    var pages = getCurrentPages(); // 获取页面栈  
+    var prevPage = pages[pages.length - 2]; // 上一个页面
+    this.setData({
+      startTime: e.detail.value
+    })
+    
+    prevPage.setData({
+      startTime : this.data.startTime
     })
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (option) {
-    let personid = option.personid;
-    this.data.personId == 1 ? this.setnavtitle("另一半") : this.setnavtitle("个人账户")
+  onLoad: function (options) {
     this.setData({
-      personId: personid
-    })
-  },
-
-  toImgShow() {
-    let _this = this
-    wx.navigateTo({
-      url: '/pages/imgShow/imgShow?imgurl=' + _this.data.imgurl[ _this.data.personId],
-      success: function (res) {
-        // 通过eventChannel向被打开页面传送数据
-      }
+      startTime : options.time
     })
   },
 
@@ -60,7 +46,7 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    
   },
 
   /**

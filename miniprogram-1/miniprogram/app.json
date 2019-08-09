@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/editAnn/editAnn",
+    "pages/reduction/reduction",
     "pages/dearwords/dearwords",
     "pages/imgShow/imgShow",
     "pages/sharearea/sharearea",
@@ -15,7 +17,8 @@
     "pages/openapi/openapi",
     "pages/openapi/serverapi/serverapi",
     "pages/openapi/callback/callback",
-    "pages/openapi/cloudid/cloudid"
+    "pages/openapi/cloudid/cloudid",
+    "pages/cropper/cropper"
   ],
   "window": {
     "navigationStyle" : "custom",
@@ -43,7 +46,7 @@
         "selectedIconPath" : "images/tabbar-active/xindong.png"
       },
       {
-        "pagePath": "pages/sharearea/sharearea",
+        "pagePath": "pages/cropper/cropper",
         "text": "我的",
         "iconPath" : "images/tabbar-default/wo.png",
         "selectedIconPath" : "images/tabbar-active/wo.png"

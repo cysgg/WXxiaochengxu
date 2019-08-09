@@ -1,9 +1,15 @@
-<!--pages/dearwords/dearwords.wxml-->
-<text>pages/dearwords/dearwords.wxml</text>
-<view bindtap="selectimg">头像</view>
-<canvas canvas-id="myCanvas" class="mycanvas"></canvas> 
-<movable-area style="width:100%;height:600px;margin-top: -600px;" scale-area>
-      <movable-view style="height: {{height}}rpx; width: {{height}}rpx; border:1rpx solid #000;" direction="all" bindchange="onChange" bindscale="onScale" scale scale-min="0.5" scale-max="4" scale-value="2"  bindtap="getsnip" >
-      </movable-view>
-    </movable-area>
-<image src="{{cutImgInfo.src}}" bindtap="getsnip" mode="scaleToFill"></image>
+<!-- pages/dearwords/dearwords.wxml -->
+<view class="main" style="width:{{windowW}}px;height:{{windowH}}px;">
+  <canvas canvas-id="myCanvas" class="mycanvas" style="width:{{windowW}}px;height:{{windowH}}px;"></canvas>
+  <movable-area class="outBox" scale-area>
+    <movable-view class=".movev" style="height: {{height}}px; width: {{width}}px;border:1rpx solid #000;" direction="all" bindchange="onChange" bindscale="onScale" scale scale-min="0.5" scale-max="4" scale-value="2" bindtap="getsnip">
+      <!-- <cover-view class="cover_view"></cover-view> -->
+    </movable-view>
+  </movable-area>
+  <view class="mian_bot">
+    <view bindtap="selectimg">选择头像</view>
+  </view>
+</view>
+<block wx:if="{{cutSuccess}}">
+  <image style="width:{{cutImgInfo.width}}px;height:{{cutImgInfo.height}}px;" src="{{cutImgInfo.src}}" mode="scaleToFill"></image>
+</block>

@@ -231,6 +231,18 @@
     text-align: center;
     padding: 2rpx 10rpx;
 }
+.popbox_btn button{
+    padding: 0;
+    line-height: 40rpx;
+    font-size: 22rpx;
+    color: #fff;
+    outline: none;
+}
+
+.button-h{
+    border: none;
+    background: none;
+  }
 
 .popbox_body{
     width: 100%;
