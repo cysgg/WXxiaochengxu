@@ -1,6 +1,8 @@
 {
   "pages": [
+    "pages/editDiary/editDiary",
     "pages/home/home",
+    "pages/diary/diary",
     "pages/editAnn/editAnn",
     "pages/reduction/reduction",
     "pages/dearwords/dearwords",

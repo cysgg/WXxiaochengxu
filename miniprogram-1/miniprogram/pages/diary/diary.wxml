@@ -1,0 +1,43 @@
+<!-- pages/diary/diary.wxml -->
+<view class="main">
+    <scroll-view class="container" scroll-x="false" scroll-y="false" upper-threshold="50" lower-threshold="50" 
+        scroll-top="0" scroll-left="0" scroll-into-view="" scroll-with-animation="false" enable-back-to-top="false" 
+        bindscrolltoupper="" bindscrolltolower="" bindscroll="">
+        <view class="items">
+            <view class="item">
+                <view class="header">
+                    <view class="header_image" >
+                        <image src="/images/couple1.jpg" mode="scaleToFill" lazy-load="false" binderror="" bindload=""></image>
+                    </view>
+                    <text>05-13 22:07</text>
+                </view>
+                <view class="content">小大事发生
+                    小大事发生
+                </view>
+            </view>
+            <view class="item" wx:for="{{15}}">
+                <view class="header">
+                    <view class="header_image" >
+                        <image src="/images/couple1.jpg" mode="scaleToFill" lazy-load="false" binderror="" bindload=""></image>
+                    </view>
+                    <text>05-13 22:07</text>
+                </view>
+                <view class="content">今年七夕
+                    小大事发生
+                    小大事发生小大事发生小大事发生小大事发生小大事发生小大事发生
+                    小大事发生
+                    小大事发生小大事发生小大事发生小大事发生小大事发生小大事发生
+                    小大事发生
+                    小大事发生小大事发生小大事发生小大事发生小大事发生
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <view class="fixedbox">
+        <view class="addbox" catchtap="toEditDiary" hover-class="addbox_hover">
+            <image class="" src="/images/add.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+                
+            </image>
+        </view>
+    </view>
+</view>

@@ -34,7 +34,8 @@ Page({
     hasshowpopupbox: false,
     homebgimg: '/images/home_bgi.jpg',
     startTime: "2017-11-12",
-    togetherDays: 0
+    togetherDays: 0,
+    personId : 1
   },
   showchooseimgbox() {
     this.setData({
@@ -71,6 +72,16 @@ Page({
   toReductionHtml(v) {
     wx.navigateTo({
       url: '/pages/reduction/reduction?imgurl=' + v,
+      success: function (res) {
+        // 通过eventChannel向被打开页面传送数据
+        console.log('111');
+
+      }
+    })
+  },
+  toDiaryHtml(){
+    wx.navigateTo({
+      url: '/pages/diary/diary?personId=' + this.data.personId,
       success: function (res) {
         // 通过eventChannel向被打开页面传送数据
         console.log('111');
@@ -145,7 +156,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let personId = 1
+    wx.setStorage({
+      key: 'personId',
+      data: personId,
+      success: (result)=>{
+        this.setData({
+          personId : personId
+        })
+      },
+      fail: ()=>{},
+      complete: ()=>{}
+    });
   },
 
   /**

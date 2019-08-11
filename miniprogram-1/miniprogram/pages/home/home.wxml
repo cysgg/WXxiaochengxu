@@ -40,7 +40,7 @@
                     <image class="scroll_item_img" src="/images/home_scroll_view/xiangce.png" mode="aspectFit|aspectFill|widthFix"></image>
                     <view class="scroll_item_text">相册</view>
                 </view>
-                <view class="scroll-view-item">
+                <view class="scroll-view-item" catchtap="toDiaryHtml">
                     <image class="scroll_item_img" src="/images/home_scroll_view/biji.png" mode="aspectFit|aspectFill|widthFix"></image>
                     <view class="scroll_item_text">写日记</view>
                 </view>

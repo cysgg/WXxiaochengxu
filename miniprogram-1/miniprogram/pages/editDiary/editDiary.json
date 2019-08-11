@@ -1,0 +1,10 @@
+{
+  "usingComponents": {},
+  
+  "navigationStyle" : "default",
+  "navigationBarBackgroundColor": "#EE3B5C",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "写日记",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+}

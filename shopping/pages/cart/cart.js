@@ -10,7 +10,7 @@ Page({
     totalPrice: ''
   },
 
-  downCount(e){
+  downCount(e) {
     const index = e.currentTarget.dataset.index
     let count = `carts[${index}].num`
     let num = --this.data.carts[index].num
@@ -20,7 +20,7 @@ Page({
     this.getTotalPrice()
   },
 
-  addCount(e){
+  addCount(e) {
     const index = e.currentTarget.dataset.index
     let count = `carts[${index}].num`
     this.setData({
@@ -29,28 +29,28 @@ Page({
     this.getTotalPrice()
   },
 
-  deleteList(e){
+  deleteList(e) {
     const index = e.currentTarget.dataset.index
     let carts = this.data.carts
-    carts.splice(index,1)
+    carts.splice(index, 1)
     let hasList = carts.length ? true : false
     this.setData({
-      carts:carts,
-      hasList : hasList
+      carts: carts,
+      hasList: hasList
     })
     this.getTotalPrice()
   },
 
-  selectAll(){
+  selectAll() {
     let selectAllStatus = this.data.selectAllStatus
     selectAllStatus = !selectAllStatus
     let carts = this.data.carts
-    carts.map(item=>{
+    carts.map(item => {
       item.selected = selectAllStatus
     })
     this.setData({
-      selectAllStatus : selectAllStatus,
-      carts : carts
+      selectAllStatus: selectAllStatus,
+      carts: carts
     })
     this.getTotalPrice()
   },
@@ -62,19 +62,12 @@ Page({
     this.setData({
       [select]: !this.data.carts[index].selected
     })
-    if (
-      this.data.carts.some(item => {
-        return !item.selected
-      })
-    ) {
-      this.setData({
-        selectAllStatus: false
-      })
-    } else {
-      this.setData({
-        selectAllStatus: true
-      })
-    }
+    let selectAllStatus = this.data.carts.some(item => {
+      return !item.selected
+    }) ? false : true
+    this.setData({
+      selectAllStatus: selectAllStatus
+    })
     this.getTotalPrice()
   },
 

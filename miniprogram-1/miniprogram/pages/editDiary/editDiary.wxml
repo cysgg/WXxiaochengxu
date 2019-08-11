@@ -1,0 +1,6 @@
+<!-- pages/editDiary/editDiary.wxml -->
+<view class="main">
+    <view class="container">
+        <textarea maxlength="-1" auto-focus></textarea>
+    </view>
+</view>
