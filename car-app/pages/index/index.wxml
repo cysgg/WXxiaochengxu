@@ -1,0 +1,23 @@
+<swiper class="section hero white" indicator-dots="{{true}}" indicator-color="rgba(0,0,0,.3)" autoplay
+  current="0" current-item-id="" interval="5000" duration="1000" circular>
+  <block wx:for="{{slides}}" wx:key="{{item.id}}">
+    <swiper-item class="" item-id="">
+      <image class="" src="{{item.image}}" mode="aspectFill" lazy-load="false" binderror="" bindload="">
+        
+      </image>
+      <view class="content centered">
+        <view class="sub-header">{{ item.sub_header }}</view>
+        <view class="header">{{ item.header }}</view>
+        <view class="description">{{ item.description }}</view>
+        <view class="action">
+          <button class="button" bindtap="testDrive">预约试驾</button>
+          <button
+            class="button primary"
+            bindtap="readMore"
+            data-id="{{ item.id }}">了解更多</button>
+        </view>
+      </view>
+
+    </swiper-item>
+  </block>
+</swiper>
