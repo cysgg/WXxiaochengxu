@@ -5,7 +5,41 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    isShowMore : true,
+    diaryText:''
+  },
+  showMore: function(e){
+    if(!this.data.istouch){
+      this.setData({
+        touchY : e.touches[0].clientY,
+        istouch : true
+      })
+    }else{
+      this.setData({
+        isShowMore : e.touches[0].clientY - this.data.touchY < 0 
+      })
+    }
+  },
+  touchend:function(e){
+    this.setData({
+      istouch:false
+    })
+  },
+  writeText:function(e){
+    this.setData({
+      diaryText : e.detail.value
+    })
+  },
+  resetText:function(e){
+    this.setData({
+      diaryText:''
+    })
+  },
+  saveText:function(e){
+    console.log('save');
+    wx.navigateBack({
+      delta: 1
+    });
   },
 
   /**

@@ -1,15 +1,17 @@
 /* pages/editDiary/editDiary.wxss */
-.main{
+.main {
     width: 100%;
     height: 100%;
 }
-.container{
+
+.container {
     display: flex;
     position: absolute;
     width: 100%;
     height: 100%;
 }
-.container textarea{
+
+.container textarea {
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -18,4 +20,45 @@
     box-sizing: border-box;
     color: #999;
     line-height: 60rpx;
+}
+
+.coverbox {
+    position: fixed;
+    z-index: 1;
+    bottom: 80rpx;
+    right: 40rpx;
+    width: 100rpx;
+    transition: height .5s ease;
+    height: 180rpx;
+}
+.coverinnbox{
+    width: 100%;
+    height: 100%;
+    transform: translateY(50%);
+    transition: transform .5s ease;
+}
+
+.showall{
+    transform: translateY(0);
+}
+
+.box {
+    border-radius: 50%;
+    background-color: #EE3B5C;
+    -webkit-box-shadow: 0 0 8rpx rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0 0 8rpx rgba(0, 0, 0, 1);
+    box-shadow: 0 0 8rpx rgba(0, 0, 0, 1);
+    padding: 10rpx;
+    width: 60rpx;
+    height: 60rpx;
+    margin: 10rpx 5px;
+}
+
+.box image {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.box_hover {
+    opacity: .4;
 }

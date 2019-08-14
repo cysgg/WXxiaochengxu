@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/editDiary/editDiary",
     "pages/home/home",
+    "pages/editDiary/editDiary",
     "pages/diary/diary",
     "pages/editAnn/editAnn",
     "pages/reduction/reduction",

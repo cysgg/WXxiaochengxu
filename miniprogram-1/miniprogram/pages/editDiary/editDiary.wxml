@@ -1,6 +1,16 @@
 <!-- pages/editDiary/editDiary.wxml -->
 <view class="main">
     <view class="container">
-        <textarea maxlength="-1" auto-focus></textarea>
+        <textarea maxlength="-1" bindinput="writeText" value="{{diaryText}}"></textarea>
     </view>
 </view>
+<cover-view class="coverbox" catchtouchmove="showMore" catchtouchend="touchend">
+    <cover-view class="coverinnbox {{isShowMore ? 'showall' : ''}}">
+        <cover-view class="box" hover-class="box_hover" hover-stay-time="100">
+            <cover-image catchtap="saveText"  class="" src="/images/editDiary/dagou.png"></cover-image>
+        </cover-view>
+        <cover-view class="box" hover-class="box_hover" hover-stay-time="100">
+            <cover-image catchtap="resetText" class="" src="/images/editDiary/zhongxiex.png"></cover-image>
+        </cover-view>
+    </cover-view>
+</cover-view>

@@ -1,11 +1,31 @@
 // pages/stories/stories.js
+const db = require('../../assets/db')
+let currentVideo = null;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    stories:db.stories,
+    currentVid:null
+  },
+  play: function(e){
+    const vid = e.target.dataset.id
+    if(vid){
+      this.setData({
+        currentVid : vid
+      })
+      if(currentVideo){
+        currentVideo.pause()
+      }
+      currentVideo = wx.createVideoContext(''+vid);
+      currentVideo.play()
+      currentVideo.sendDanmu({
+        text:'666',
+        color:'red'
+      })
+    }
   },
 
   /**
